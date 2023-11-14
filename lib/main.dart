@@ -1,6 +1,9 @@
 import 'package:doctor_appointment/core.dart';
 import 'package:doctor_appointment/main_layout.dart';
 import 'package:doctor_appointment/screens/auth_page.dart';
+import 'package:doctor_appointment/screens/booking_page.dart';
+import 'package:doctor_appointment/screens/doctor_details.dart';
+import 'package:doctor_appointment/screens/success_booked.dart';
 import 'package:doctor_appointment/utils/config.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Doctor App',
-navigatorKey: Get.navigatorKey,
+      navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         inputDecorationTheme: const InputDecorationTheme(
@@ -45,6 +48,9 @@ navigatorKey: Get.navigatorKey,
       routes: {
         '/': (context) => const AuthPage(),
         'main': (context) => const MainLayout(),
+        'doc_details': (context) => const DoctorDetails(),
+        'booking_page': (context) => const BookingPage(),
+        'success_booking': (context) => const AppointmentBooked(),
       },
     );
   }
